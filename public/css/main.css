@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: auto;
+  padding: 10px;
+}
+
+.tabs {
+  display: flex;
+  width: 600px;
+  margin: 100px auto 0;
+}
+
+.tab-links,
+.goal,
+.table,
+.difficulty-selection,
+.battle-action {
+  flex: 1;
+}
+
+.third {
+  display: flex;
+  flex-direction: initial;
+}
+
+.tab-links.active {
+  background-color: #c7c7c7;
+}
+
+.tab-content,
+.difficulty-selection,
+.battle-action {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.focused {
+  outline: solid 2px red;
+}
+
+.bulls-and-cows, .fight {
+  display: flex;
+  flex-direction: initial;
+}
+
+.controls {
+  margin-top: 8px;
+}
+
+.table {
+  background-color: gainsboro;
+}
+
+.turn-list, .battle-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  height: 100%;
+  max-height: 360px;
+  overflow-y: scroll;
+}

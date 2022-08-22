@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tab-links active" data-task="first">Task 1</button>
+      <button class="tab-links" data-task="second">Task 2</button>
+      <button class="tab-links" data-task="third">Task 3</button>
+      <button class="tab-links" data-task="fourth">Task 4</button>
+    </div>
+    <div class="container">
+      <div id="first" class="tab-content active">
+      </div>
+      <div id="second" class="tab-content">
+        <form id="formElement">
+          One: <input type="text"><br>
+          Two: <input type="text">
+        </form>
+      </div>
+      <div id="third" class="tab-content">
+        <div class="bulls-and-cows">
+          <div class="goal">
+            Загаданное число: <span class="number"></span>
+            <p>Осталось <span class="turns">10</span> ходов</p>
+            <form>
+              <div>
+                <label for="player">Введите число</label>
+                <input type="text" id="player">
+              </div>
+              <div class="controls">
+                <input type="button" id="guess-number" value="Send a Number" onclick="guess()">
+                <input type="button" id="new-game" value="New Start" onclick="newGame()">
+              </div>
+            </form>
+          </div>
+          <div class="table">
+            <div class="turn-list"></div>
+          </div>
+        </div>
+      </div>
+      <div id="fourth" class="tab-content">
+        <div class="fight">
+          <form class="difficulty-selection active">
+            Выберите уровень сложности:
+            <p>
+              <label for="light">Легкий</label>
+              <input type="radio" name="difficulty" id="light" value="30" checked>
+              <label for="medium">Средний</label>
+              <input type="radio" name="difficulty" id="medium" value="20">
+              <label for="hard">Высокий</label>
+              <input type="radio" name="difficulty" id="hard" value="10">
+            </p>
+            <button type="submit">Подтвердить выбор</button>
+          </form>
+          <form class="battle-action">
+            Здоровье монстра "<span class="monster-name"></span>": <span class="monster-health"></span>
+            <p>Здоровье мага <span class="player-name"></span>: <span class="player-health"></span></p>
+            Используйте одну из способностей:
+            <p>
+              <select name="select" onchange="">
+                <option value="0" selected>Удар боевым кадилом</option>
+                <option value="1">Вертушка левой пяткой</option>
+                <option value="2">Каноничный фаербол</option>
+                <option value="3">Магический блок</option>
+              </select>
+            </p>
+            <p class="description"></p>
+            <button type="submit" id="action">Подтвердить выбор</button>
+            <button id="start-battle">Новая игра</button>
+          </form>
+          <div class="table">
+            <div class="battle-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="script/data.js"></script>
+    <script type="text/javascript" src="script/taskOne.js"></script>
+    <script type="text/javascript" src="script/taskTwo.js"></script>
+    <script type="text/javascript" src="script/taskThree.js"></script>
+    <script type="module" src="script/taskFour.js"></script>
+    <script type="text/javascript" src="script/tabs.js"></script>
+  </body>
+</html>
